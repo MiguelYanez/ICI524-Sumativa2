@@ -14,4 +14,15 @@ router.get('/getshark', function(req, res) {
     shark.list(req,res);
 });
 
+router.get('/deleteshark/:id', function(req, res) {
+    shark.delete(req,res);
+});
+
+router.get('/editshark/:id', function(req, res) {
+    shark.editor(req,res);
+});
+router.post('/editshark/:id', function(req, res) {
+    shark.edit(req,res);
+});
+
 module.exports = router;

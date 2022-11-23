@@ -43,35 +43,17 @@
                 <img src="https://assets.digitalocean.com/articles/docker_node_image/sammy.png" alt="Sammy the Shark">
             </p>
         </div>
-	<div class="col-lg-4">
+        <div class="col-lg-4">
             <p>
-              <table>
-                <tr>
-                  <th>Your Sharks</th>
-                  <th>Edit</th>
-                  <th>Delete</th>
-                </tr>
-                    <% sharks.forEach(function(shark) { %>
-                    <tr>
-                        <td>
-                                <p>Name: <%= shark.name %></p>
-                                <p>Character: <%= shark.character %></p>
-                        </td>
-                        <td>
-                            <a href="/sharks/editshark/<%=shark._id%>">
-                                <button>Edit</button>
-                             </a>
-                        </td>
-                        <td>
-                            <a href="/sharks/deleteshark/<%=shark._id%>">
-                                <button>Delete</button>
-                             </a>
-                        </td>
-                    </tr>
-                    <% }); %>
-              </table>
+                <form action="/sharks/editshark/<%= sharky._id %>" method="post">
+                    <div class="caption">Edit Your Shark</div>
+                    <input type="text" value="<%= sharky.name %>" name="name">
+                    <input type="text" value="<%= sharky.character %>" name="character">
+                    <button type="submit">Save</button>
+                </form>
             </p>
         </div>
+    </div>
     </div>
   </div>
 </html>
