@@ -6,6 +6,7 @@
 ```
 git clone https://github.com/MiguelYanez/ICI524-Sumativa2
 ```
+
 2. Añadir archivo .env
 
  2.1 En \node_project\ crear archivo '.env'
@@ -16,7 +17,7 @@ git clone https://github.com/MiguelYanez/ICI524-Sumativa2
  MONGO_PORT=27017
  MONGO_DB=sharkinfo
  ```
-
+ 
 3. Recrear archivo 'wait-for.sh'
 
   3.1 En \node_project\, copiar contenido del archivo 'wait-for.sh'
